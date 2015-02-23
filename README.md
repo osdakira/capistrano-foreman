@@ -1,6 +1,7 @@
 # Patch adoptation
 
-- https://github.com/hyperoslo/capistrano-foreman/pull/31/files
+    set :foreman_options,
+        procfile: -> { "#{current_path}/config/#{fetch(:rails_env)}.proc" }
 
 # Capistrano Foreman
 

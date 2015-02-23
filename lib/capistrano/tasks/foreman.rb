@@ -13,6 +13,11 @@ namespace :foreman do
           log: File.join(shared_path, 'log'),
         }.merge fetch(:foreman_options, {})
 
+        opts = opts.map do |opt, value|
+          value = value.is_a?(Proc) ? value.call : value
+          [opt, value]
+        end.to_h
+
         foreman_exec :foreman, 'export',
           fetch(:foreman_template),
           fetch(:foreman_export_path),
