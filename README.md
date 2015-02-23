@@ -1,3 +1,7 @@
+# Patch adoptation
+
+- https://github.com/hyperoslo/capistrano-foreman/pull/31/files
+
 # Capistrano Foreman
 
 [![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/capistrano-foreman.svg?style=flat)](https://codeclimate.com/github/hyperoslo/capistrano-foreman)
